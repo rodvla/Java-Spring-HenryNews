@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger.html
