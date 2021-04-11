@@ -32,7 +32,7 @@ public class WriterService {
     }
 
     public Writer editPerson(Writer write) {
-        Writer writer = writerRepository.findById(write.getId()).orElse(new Writer());
+        Writer writer = writerRepository.findById(write.getId()).orElseThrow(() -> new HttpClientErrorException(HttpStatus.NOT_FOUND));
         Writer editwriter = new Writer();
         editwriter.setId(writer.getId());
         if (write.getNombre() != null) {

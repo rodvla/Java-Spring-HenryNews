@@ -33,7 +33,7 @@ public abstract class Noticias implements Serializable {
     @AccessType(AccessType.Type.PROPERTY)
     public abstract NoticiasEnum noticiasEnum();
 
-    @ManyToOne(fetch = FetchType.EAGER) //trae toda la lista de vehiculos, contrario LAZY
+    @ManyToOne(fetch = FetchType.EAGER) //todo el contenido, contrario LAZY
     @JoinColumn(name = "writer_id")
     private Writer owner;
 

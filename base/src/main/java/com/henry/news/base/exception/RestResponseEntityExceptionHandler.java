@@ -35,8 +35,9 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
         List<String> errors = new ArrayList<String>();
         errors.add(request.getDescription(false) + " , message=" + ex.getMessage());
         ApiError apiError = new ApiError(
-                HttpStatus.INTERNAL_SERVER_ERROR, ex.getLocalizedMessage(), errors);
+               HttpStatus.INTERNAL_SERVER_ERROR, ex.getLocalizedMessage(), errors);
         return new ResponseEntity<Object>(
-                apiError, new HttpHeaders(), apiError.getStatus());
+               apiError, new HttpHeaders(), apiError.getStatus());
     }
+
 }

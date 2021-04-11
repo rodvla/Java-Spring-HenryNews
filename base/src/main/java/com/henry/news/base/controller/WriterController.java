@@ -2,7 +2,6 @@ package com.henry.news.base.controller;
 
 import com.henry.news.base.converter.WriterToWriterDTOConverter;
 import com.henry.news.base.model.Writer;
-
 import com.henry.news.base.model.dto.WriterDTO;
 import com.henry.news.base.service.WriterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +60,5 @@ public class WriterController {
     public WriterDTO getWriterDTOByID(@PathVariable Integer id){
         return conversionService.convert(writerService.getWriter(id), WriterDTO.class);
     }
-
 
 }
