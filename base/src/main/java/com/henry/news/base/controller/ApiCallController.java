@@ -18,7 +18,7 @@ public class ApiCallController {
     ApiCallService apiCallService;
 
     @GetMapping
-    @Operation(summary = "Endpoins API clima")
+    @Operation(summary = "Endpoints API clima")
     public Object callAPI() {
         try {
             ApiWeatherResponse apiWeatherResponse = apiCallService.callAPI();
